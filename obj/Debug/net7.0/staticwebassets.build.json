@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "PdC4x9QGgVYAlV17r9YZmTSiNwinf+2eUYUgv6urKgc=",
+  "Source": "musical-app",
+  "BasePath": "_content/musical-app",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
