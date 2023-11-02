@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using MusicalApi.Models
+using MusicalApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
