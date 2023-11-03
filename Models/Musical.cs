@@ -1,4 +1,6 @@
-namespace MusicalApi.Models;
+using System;
+
+namespace MusicalApi.Data;
 
 public class Musical{
     public long Id { get; set; }

@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace MusicalApi.Models;
+namespace MusicalApi.Data;
 
 public class MusicalContext : DbContext{
     public MusicalContext(DbContextOptions<MusicalContext> options) : base(options)
