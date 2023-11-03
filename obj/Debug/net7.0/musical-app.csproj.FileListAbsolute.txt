@@ -34,3 +34,8 @@
 /Users/admin/Documents/swe/tech-upskilling/musical-app/obj/Debug/net7.0/musical-app.pdb
 /Users/admin/Documents/swe/tech-upskilling/musical-app/obj/Debug/net7.0/musical-app.genruntimeconfig.cache
 /Users/admin/Documents/swe/tech-upskilling/musical-app/obj/Debug/net7.0/ref/musical-app.dll
+/Users/admin/Documents/swe/tech-upskilling/musical-app/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/admin/Documents/swe/tech-upskilling/musical-app/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.Design.dll
+/Users/admin/Documents/swe/tech-upskilling/musical-app/bin/Debug/net7.0/Npgsql.dll
+/Users/admin/Documents/swe/tech-upskilling/musical-app/bin/Debug/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/admin/Documents/swe/tech-upskilling/musical-app/bin/Debug/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll
