@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using MusicalApi.Data;
 using System;
 using System.Collections.Generic;
@@ -92,6 +93,24 @@ public class MusicalController: ControllerBase
         return NoContent();
     }
 
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteMusical(long id)
+    {
+        if (_context.Musicals == null)
+        {
+            return NotFound();
+        }
+        var musical = await _context.Musicals.FindAsync(id);
+        if (musical == null)
+        {
+            return NotFound();
+        }
+
+        _context.Musicals.Remove(musical);
+        await _context.SaveChangesAsync();
+
+        return NoContent();
+    }
 
     private bool MusicalExists(long id)
     {
