@@ -53,5 +53,51 @@ public class MusicalController: ControllerBase
         return CreatedAtAction("GetMusical", new {id = musical.Id}, musical);
     }
 
+    [HttpPut("{id}")]
+    public async Task<IActionResult> PutMusical(long id, Musical musical)
+    {
+        // if (id != musical.Id)
+        // {
+        //     return BadRequest();
+        // }
+
+        var foundMusical = await _context.Musicals.FindAsync(id);
+        if (foundMusical == null)
+        {
+            return NotFound();
+        }
+
+        foundMusical.Name = musical.Name;
+        foundMusical.OpenDate = musical.OpenDate;
+        foundMusical.CloseDate = musical.CloseDate;
+        foundMusical.Location = musical.Location;
+        foundMusical.SpotifyAlbum = musical.SpotifyAlbum;
+        foundMusical.AlbumCover = musical.AlbumCover;
+
+        try
+        {
+            await _context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!MusicalExists(id))
+            {
+                return NotFound();
+            }
+            else
+            {
+                throw;
+            }
+        }
+        return NoContent();
+    }
+
+
+    private bool MusicalExists(long id)
+    {
+        return (_context.Musicals?.Any(e => e.Id == id)).GetValueOrDefault();
+    }
+
+
 
 }
