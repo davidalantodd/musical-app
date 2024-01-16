@@ -28,6 +28,12 @@ Go to the project directory
   cd musical-app
 ```
 
+Change directory to server
+
+```bash
+  cd server
+```
+
 Trust HTTP certificate
 
 ```bash
