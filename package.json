@@ -4,7 +4,9 @@
   "description": "An app to track musical theatre productions using .NET Core and C#",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm-run-all --parallel start:server start:client",
+    "start:server": "(cd server && dotnet run --launch-profile https)",
+    "start:client": "(cd client && ng serve)"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/davidalantodd/musical-app/issues"
   },
-  "homepage": "https://github.com/davidalantodd/musical-app#readme"
+  "homepage": "https://github.com/davidalantodd/musical-app#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
 }

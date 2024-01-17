@@ -1,18 +1,22 @@
 # Musical App
-An app to track musical theatre productions using .NET Core and C#
+An full-stack app to track musical theatre productions using:
+- C#/.NET
+- Angular/TypeScript
+- PostgreSQL
+- SCSS
 
 ## Installation
 
-Install the following:
+Install the following for back-end:
 - Visual Studio Code
 - [C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) for VS Code
 - [.NET SDK](https://dotnet.microsoft.com/download/dotnet/7.0) - latest version
+- [Angular CLI](https://angular.io/guide/setup-local) - use `npm install -g @angular/cli`
 
 You may also install the following VS Code extensions:
 - [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit)
 - [.NET MAUI](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui)
 - [Unity](https://marketplace.visualstudio.com/items?itemName=visualstudiotoolsforunity.vstuc)
-
 
 ## Run Locally
 
@@ -28,26 +32,25 @@ Go to the project directory
   cd musical-app
 ```
 
-Change directory to server
+Read the [client](/client) and [server](/server/) docs for any additional setup.
+
+Install dependencies
 
 ```bash
-  cd server
+  npm install
 ```
 
-Trust HTTP certificate
+Start both servers using [`npm-run-all`](https://www.npmjs.com/package/npm-run-all) script
 
 ```bash
-  dotnet dev-certs https --trust
-```
-
-Start the server
-
-```bash
-  dotnet run --launch-profile https
+  npm start
 ```
 
 ## Testing
 
-Test the API endpoints by:
-- visting the https URL with /swagger appended. (e.g. https://localhost:1234/swagger)
-- using Postman (https://localhost:1234)
+View front-end dev server using:
+- [http://localhost:4200/](http://localhost:4200/)
+
+Test the back-end endpoints by:
+- visting the https URL generated in the terminal with `/swagger` appended (e.g. https://localhost:7234/swagger)
+- using Postman (https://localhost:7234)
