@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { MatCardModule} from '@angular/material/card'
 
 interface Musical {
   name: string,
@@ -16,7 +17,7 @@ interface Musical {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HttpClientModule],
+  imports: [CommonModule, RouterOutlet, HttpClientModule, MatCardModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

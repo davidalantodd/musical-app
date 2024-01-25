@@ -1,11 +1,17 @@
 <h1>Musical App 🎭</h1>
-<ul *ngFor="let musical of musicals">
-  <li>Name: {{musical.name}}</li>
-  <li>Open Date: {{musical.openDate.toString()}}</li>
-  <li>Close Date: {{(musical.closeDate)?musical.closeDate.toString():("Ongoing")}}</li>
-  <li>Location: {{musical.location}}</li>
-  <li>Spotify Album: {{musical.spotifyAlbum}}</li>
-  <img src={{musical.albumCover}}/>
-</ul>
+<div class="card-container">
+  <mat-card *ngFor="let musical of musicals">
+    <mat-card-header>
+      <mat-card-title>{{musical.name}}</mat-card-title>
+      <mat-card-subtitle>{{musical.location}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{musical.albumCover}} alt="album cover art for musical"/>
+    <mat-card-content>
+      <p>Open Date: {{musical.openDate.toString()}}</p>
+      <p>Close Date: {{(musical.closeDate)?musical.closeDate.toString():("Ongoing")}}</p>
+      <p>Spotify Album: {{musical.spotifyAlbum}}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
 
 <router-outlet></router-outlet>
