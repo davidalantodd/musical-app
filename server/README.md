@@ -22,6 +22,12 @@ Trust HTTP certificate
   dotnet dev-certs https --trust
 ```
 
+Create the database connection string in a `secrets.json` file. Enable the secret manager tool
+
+```bash
+  dotnet user-secrets init
+```
+
 Start the server
 
 ```bash
