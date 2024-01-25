@@ -20,7 +20,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+app.UseCors(policy => 
+    policy.WithOrigins("http://localhost:4200")
+          .AllowAnyMethod()
+          .AllowAnyHeader());
+
+// app.UseHttpsRedirection();
+
+// app.UseCors("AllowAllOrigins");
 
 app.UseAuthorization();
 

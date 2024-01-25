@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 //route points to "api/Musical" -- whatever the name of the Controller class is minus "Controller"
-[Route("API/[Controller]")]
+[Route("api/[Controller]")]
 [ApiController]
 public class MusicalController: ControllerBase
 {

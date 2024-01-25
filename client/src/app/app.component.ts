@@ -1,14 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+interface Musical {
+  Name: string,
+  OpenDate: Date,
+  CloseDate: Date,
+  Location: string,
+  SpotifyAlbum : string,
+  AlbumCover: string
+}
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'musical-app';
+export class AppComponent implements OnInit {
+  musicals: Musical[] = [];
+
+  constructor(private http: HttpClient) { }
+
+  getMusicals() {
+    return this.http.get<Musical[]>("http://localhost:5132/api/Musical/")
+  }
+
+  ngOnInit() {
+    this.getMusicals().subscribe(data => 
+      {
+        console.log(data);
+        this.musicals = data;
+      });
+  }
 }
