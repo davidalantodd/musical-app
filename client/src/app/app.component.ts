@@ -5,12 +5,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 interface Musical {
-  Name: string,
-  OpenDate: Date,
-  CloseDate: Date,
-  Location: string,
-  SpotifyAlbum : string,
-  AlbumCover: string
+  name: string,
+  openDate: Date,
+  closeDate: Date,
+  location: string,
+  spotifyAlbum : string,
+  albumCover: string
 }
 
 @Component({
@@ -35,5 +35,8 @@ export class AppComponent implements OnInit {
         console.log(data);
         this.musicals = data;
       });
+      
   }
+
+  
 }

@@ -1,6 +1,11 @@
 <h1>Musical App 🎭</h1>
 <ul *ngFor="let musical of musicals">
-  <li>{{musical}}</li>
+  <li>Name: {{musical.name}}</li>
+  <li>Open Date: {{musical.openDate.toString()}}</li>
+  <li>Close Date: {{(musical.closeDate)?musical.closeDate.toString():("Ongoing")}}</li>
+  <li>Location: {{musical.location}}</li>
+  <li>Spotify Album: {{musical.spotifyAlbum}}</li>
+  <img src={{musical.albumCover}}/>
 </ul>
 
 <router-outlet></router-outlet>

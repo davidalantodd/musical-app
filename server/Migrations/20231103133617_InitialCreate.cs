@@ -16,18 +16,18 @@ namespace musical_app.Migrations
                 name: "Musicals",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Name = table.Column<string>(type: "text", nullable: true),
-                    OpenDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    CloseDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    Location = table.Column<string>(type: "text", nullable: true),
-                    SpotifyAlbum = table.Column<string>(type: "text", nullable: true),
-                    AlbumCover = table.Column<string>(type: "text", nullable: true)
+                    name = table.Column<string>(type: "text", nullable: true),
+                    openDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    closeDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    location = table.Column<string>(type: "text", nullable: true),
+                    spotifyAlbum = table.Column<string>(type: "text", nullable: true),
+                    albumCover = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Musicals", x => x.Id);
+                    table.PrimaryKey("PK_Musicals", x => x.id);
                 });
         }
 

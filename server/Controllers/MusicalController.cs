@@ -51,7 +51,7 @@ public class MusicalController: ControllerBase
         _context.Musicals.Add(musical);
 
         await _context.SaveChangesAsync();
-        return CreatedAtAction("GetMusical", new {id = musical.Id}, musical);
+        return CreatedAtAction("GetMusical", new {id = musical.id}, musical);
     }
 
     [HttpPut("{id}")]
@@ -68,12 +68,12 @@ public class MusicalController: ControllerBase
             return NotFound();
         }
 
-        foundMusical.Name = musical.Name;
-        foundMusical.OpenDate = musical.OpenDate;
-        foundMusical.CloseDate = musical.CloseDate;
-        foundMusical.Location = musical.Location;
-        foundMusical.SpotifyAlbum = musical.SpotifyAlbum;
-        foundMusical.AlbumCover = musical.AlbumCover;
+        foundMusical.name = musical.name;
+        foundMusical.openDate = musical.openDate;
+        foundMusical.closeDate = musical.closeDate;
+        foundMusical.location = musical.location;
+        foundMusical.spotifyAlbum = musical.spotifyAlbum;
+        foundMusical.albumCover = musical.albumCover;
 
         try
         {
@@ -114,7 +114,7 @@ public class MusicalController: ControllerBase
 
     private bool MusicalExists(long id)
     {
-        return (_context.Musicals?.Any(e => e.Id == id)).GetValueOrDefault();
+        return (_context.Musicals?.Any(e => e.id == id)).GetValueOrDefault();
     }
 
 

@@ -20,6 +20,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+if (false){  //change this to true to reseed the database upon server restart
+    SeedData.Initialize(app.Services);
+}
+
 app.UseCors(policy => 
     policy.WithOrigins("http://localhost:4200")
           .AllowAnyMethod()
