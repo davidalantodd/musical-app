@@ -12,10 +12,10 @@ interface Musical {
 }
 
 @Component({
-  templateUrl: './musicals.component.html',
-  styleUrl: './musicals.component.scss'
+  templateUrl: './musical-list.component.html',
+  styleUrl: './musical-list.component.scss'
 })
-export class MusicalsComponent implements OnInit {
+export class MusicalComponent implements OnInit {
   musicals: Musical[] = [];
   title = 'musical-app'
 

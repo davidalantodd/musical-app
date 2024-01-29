@@ -1,10 +1,12 @@
 import {NgModule} from '@angular/core'
 import { Routes, RouterModule, Router } from '@angular/router';
-import { MusicalsComponent } from './musicals.component';
+import { MusicalComponent } from './musical-list/musical-list.component';
+import { MusicalDetailComponent } from './musical-detail/musical-detail.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/musicals', pathMatch: 'full' },
-    { path: 'musicals', component: MusicalsComponent },
+    { path: 'musicals', component: MusicalComponent },
+    { path: 'musicals/:id', component: MusicalDetailComponent}
 ];
 
 @NgModule({
