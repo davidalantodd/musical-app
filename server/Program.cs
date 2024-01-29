@@ -20,7 +20,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-if (true){  //change this to true to reseed the database upon server restart
+if (false){  //change this to true to reseed the database upon server restart
     SeedData.Initialize(app.Services);
 }
 

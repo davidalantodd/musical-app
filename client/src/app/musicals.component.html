@@ -1,0 +1,14 @@
+<div class="card-container">
+  <mat-card *ngFor="let musical of musicals">
+    <mat-card-header>
+      <mat-card-title>{{musical.name}}</mat-card-title>
+      <mat-card-subtitle>{{musical.location}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{musical.albumCover}} alt="album cover art for musical"/>
+    <mat-card-content>
+      <p>Open Date: {{musical.openDate.toString()}}</p>
+      <p>Close Date: {{(musical.closeDate)?musical.closeDate.toString():("Ongoing")}}</p>
+      <iframe style="border-radius:12px" [src]="getSafeUrl(musical.spotifyAlbum)" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </mat-card-content>
+  </mat-card>
+</div>
