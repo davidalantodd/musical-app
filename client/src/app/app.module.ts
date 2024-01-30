@@ -7,7 +7,10 @@ import { MusicalComponent } from './musical-list/musical-list.component';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { MatCardModule} from '@angular/material/card'
+import { MatCardModule} from '@angular/material/card';
+import { MatToolbarModule} from '@angular/material/toolbar';
+import { MatIcon, MatIconModule} from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button'
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { MatCardModule} from '@angular/material/card'
     CommonModule,
     RouterOutlet,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

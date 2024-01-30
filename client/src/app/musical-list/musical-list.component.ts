@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
 
 interface Musical {
+  id: any|string;
   name: string,
   openDate: Date,
   closeDate: Date,
@@ -12,12 +13,12 @@ interface Musical {
 }
 
 @Component({
+  selector: 'app-musical-list',
   templateUrl: './musical-list.component.html',
   styleUrl: './musical-list.component.scss'
 })
 export class MusicalComponent implements OnInit {
   musicals: Musical[] = [];
-  title = 'musical-app'
 
   constructor(private http: HttpClient, private sanitizer: DomSanitizer) { }
 

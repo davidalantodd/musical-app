@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 
 interface Musical {
   name: string,
@@ -12,32 +13,41 @@ interface Musical {
 }
 
 @Component({
+  selector: 'app-musical-detail',
   templateUrl: './musical-detail.component.html',
   styleUrl: './musical-detail.component.scss'
 })
 export class MusicalDetailComponent implements OnInit {
-  musicals: Musical[] = [];
-  title = 'musical-app'
+    musicalId: number = 0;
+    musical: Musical = {
+      name: '',
+      openDate: new Date(),
+      closeDate: new Date(),
+      location: '',
+      spotifyAlbum : '',
+      albumCover: ''
+    };
 
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer) { }
-
+  constructor(private route: ActivatedRoute, private http: HttpClient, private sanitizer: DomSanitizer) { }
 
   //get the trusted URL for the iframe
   getSafeUrl(url: string) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
-  getMusicals() {
-    return this.http.get<Musical[]>("http://localhost:5132/api/Musical/")
-  }
-
   ngOnInit() {
-    this.getMusicals().subscribe(data => 
+    const id = this.route.snapshot.paramMap.get('id');
+    this.musicalId = id ? +id : 0;
+    this.getMusical().subscribe(data => 
       {
         console.log(data);
-        this.musicals = data;
+        this.musical = data;
       });
       
+  }
+
+  getMusical() {
+    return this.http.get<Musical>(`http://localhost:5132/api/Musical/${this.musicalId}`)
   }
 
   
