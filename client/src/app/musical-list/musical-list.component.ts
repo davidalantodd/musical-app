@@ -19,6 +19,7 @@ interface Musical {
 })
 export class MusicalComponent implements OnInit {
   musicals: Musical[] = [];
+  musicalApiURL: string = "http://localhost:5132/api/Musical/"
 
   constructor(private http: HttpClient, private sanitizer: DomSanitizer) { }
 
@@ -29,8 +30,12 @@ export class MusicalComponent implements OnInit {
   }
 
   getMusicals() {
-    return this.http.get<Musical[]>("http://localhost:5132/api/Musical/")
+    return this.http.get<Musical[]>(this.musicalApiURL)
   }
+
+  // addMusical(musical: Musical): Musical {
+  //   return this.http.post<Musical>(this.musicalApiURL, musical)
+  // }
 
   ngOnInit() {
     this.getMusicals().subscribe(data => 

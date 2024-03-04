@@ -1,0 +1,34 @@
+<form mat-form-field [formGroup]="musicalForm" (ngSubmit)="onSubmit()">
+    <label>
+        Name:
+        <input type="text" formControlName="name">
+    </label> 
+
+    <label>
+        Open Date:
+        <input type="date" formControlName="openDate">
+    </label>
+
+    <label>
+        Close Date:
+        <input type="date" formControlName="closeDate">
+    </label>
+
+    <label>
+        Location:
+        <input type="text" formControlName="location">
+    </label>
+
+    <label>
+        Spotify Album:
+        <input type="text" formControlName="spotifyAlbum">
+    </label>
+
+    <label>
+        Album Cover:
+        <input type="text" formControlName="albumCover">
+    </label>
+  
+    <button type="submit">Submit</button>
+  
+  </form>
