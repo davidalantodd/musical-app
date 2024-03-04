@@ -14,7 +14,7 @@ You may also install the following VS Code extensions:
 - [Unity](https://marketplace.visualstudio.com/items?itemName=visualstudiotoolsforunity.vstuc)
 
 
-## Run Back-en Locally
+## Run Back-end Locally
 
 Trust HTTP certificate
 
