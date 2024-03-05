@@ -1,5 +1,5 @@
 # Musical App
-An full-stack app to track musical theatre productions using:
+A full-stack app to track musical theatre productions using:
 - C#/.NET
 - Angular/TypeScript
 - PostgreSQL
