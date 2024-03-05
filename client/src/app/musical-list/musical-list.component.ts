@@ -33,14 +33,9 @@ export class MusicalComponent implements OnInit {
     return this.http.get<Musical[]>(this.musicalApiURL)
   }
 
-  // addMusical(musical: Musical): Musical {
-  //   return this.http.post<Musical>(this.musicalApiURL, musical)
-  // }
-
   ngOnInit() {
     this.getMusicals().subscribe(data => 
       {
-        console.log(data);
         this.musicals = data;
       });
       

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Router, RouterConfigOptions } from '@angular/router'
 
 interface Musical {
   id: any|string;
@@ -31,7 +31,7 @@ export class CreateMusicalFormComponent {
     albumCover: new FormControl('')
   });
 
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer) { }
+  constructor(private http: HttpClient, private sanitizer: DomSanitizer, private router: Router) { }
 
   //get the trusted URL for the iframe
   getSafeUrl(url: string) {
@@ -51,6 +51,7 @@ export class CreateMusicalFormComponent {
     formData.openDate = formData.openDate ? new Date(formData.openDate).toISOString() : '';
     formData.closeDate = formData.closeDate ? new Date(formData.closeDate).toISOString() : '';
     this.createMusical(formData);
+    this.router.navigate(['/musicals'])
   }
 
 }
