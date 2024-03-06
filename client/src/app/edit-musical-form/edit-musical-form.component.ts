@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
-import { first, firstValueFrom, map } from 'rxjs';
+import { MusicalsRefreshService } from '../musicals-refresh.service';
+import { firstValueFrom } from 'rxjs';
 
 interface Musical {
   id: any|string;
@@ -32,19 +33,20 @@ export class EditMusicalFormComponent {
     albumCover: new FormControl('')
   });
 
-  constructor ( private http: HttpClient, private router: Router, private route: ActivatedRoute ) { }
+  constructor ( private http: HttpClient, private router: Router, private route: ActivatedRoute , private refreshService: MusicalsRefreshService) { }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
     this.musicalId = id ? +id : 0;
   }
 
-  editMusical(musical: any) {
-    console.log(`http://localhost:5132/api/Musical/${this.musicalId}`)
-    this.http.put(`http://localhost:5132/api/Musical/${this.musicalId}`, {Id: this.musicalId, ...musical}).subscribe({
-      next: res => console.log(res),
-      error: err => console.error(err)
-  });
+  async editMusical(musical: any) {
+    try {
+      await firstValueFrom(this.http.put(`http://localhost:5132/api/Musical/${this.musicalId}`, {Id: this.musicalId, ...musical}))
+      this.refreshService.requestRefresh();
+    } catch (err) {
+      console.error(err)
+    }
   }
 
   async onSubmit() {
@@ -52,7 +54,7 @@ export class EditMusicalFormComponent {
     formData.openDate = formData.openDate ? new Date(formData.openDate).toISOString() : '';
     formData.closeDate = formData.closeDate ? new Date(formData.closeDate).toISOString() : '';
     await this.editMusical(formData);
-    this.router.navigate([`/musicals/${this.musicalId}`])
+    await this.router.navigate([`/musicals/${this.musicalId}`])
   }
 
 }

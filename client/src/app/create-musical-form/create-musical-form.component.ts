@@ -3,6 +3,8 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router, RouterConfigOptions } from '@angular/router'
+import { MusicalsRefreshService } from '../musicals-refresh.service';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-create-musical-form',
@@ -21,22 +23,24 @@ export class CreateMusicalFormComponent {
     albumCover: new FormControl('')
   });
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router, private refreshService: MusicalsRefreshService) { }
 
 
-  createMusical(musical: any) {
-    this.http.post('http://localhost:5132/api/Musical/', musical).subscribe({
-      next: res => console.log(res),
-      error: err => console.error(err)
-    });
+  async createMusical(musical: any) {
+    try {
+      await firstValueFrom(this.http.post('http://localhost:5132/api/Musical/', musical))
+      await this.refreshService.requestRefresh();
+    } catch (err) {
+      console.error(err)
+    }
   }
 
-  onSubmit() {
+async onSubmit() {
     const formData = this.createMusicalForm.value;
     formData.openDate = formData.openDate ? new Date(formData.openDate).toISOString() : '';
     formData.closeDate = formData.closeDate ? new Date(formData.closeDate).toISOString() : '';
-    this.createMusical(formData);
-    this.router.navigate(['/musicals'])
+    await this.createMusical(formData);
+    await this.router.navigate(['/musicals'])
   }
 
 }

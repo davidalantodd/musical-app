@@ -11,9 +11,9 @@ public class MusicalContext : DbContext{
 
     public DbSet<Musical> Musicals { get; set; } = null!;
 
-    public static void Initialize(MusicalContext context)
+    public static async Task Initialize(MusicalContext context)
     {
-        context.Database.EnsureCreated();
+        await context.Database.EnsureCreatedAsync();
 
         context.Musicals.RemoveRange(context.Musicals);
         context.SaveChanges();
@@ -34,6 +34,6 @@ public class MusicalContext : DbContext{
             context.Musicals.Add(musical);
         }
 
-        context.SaveChanges();
+        await context.SaveChangesAsync();
     }
 }

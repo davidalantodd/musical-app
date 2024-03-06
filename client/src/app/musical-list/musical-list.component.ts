@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
+import { MusicalsRefreshService } from '../musicals-refresh.service';
+import { Subscription } from 'rxjs';
 
 interface Musical {
   id: any|string;
@@ -21,7 +23,8 @@ export class MusicalComponent implements OnInit {
   musicals: Musical[] = [];
   musicalApiURL: string = "http://localhost:5132/api/Musical/"
 
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer) { }
+  constructor(private http: HttpClient, private sanitizer: DomSanitizer, private refreshService: MusicalsRefreshService) { }
+  private refreshSubscription: Subscription | null = null;
 
 
   //get the trusted URL for the iframe
@@ -34,12 +37,24 @@ export class MusicalComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getMusicals().subscribe(data => 
-      {
-        this.musicals = data;
-      });
-      
+    this.refreshService.refreshNeeded$.subscribe(refresh => {
+      if (refresh) {
+        this.getMusicals().subscribe(data => {
+          this.musicals = data;
+          this.refreshService.refreshNeeded.next(false);
+        });
+      } else {
+        this.getMusicals().subscribe(data => {
+          this.musicals = data;
+        });
+      }
+    });
   }
 
+  ngOnDestroy() {
+    if (this.refreshSubscription) {
+      this.refreshSubscription.unsubscribe();
+    }
+  }
   
 }

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all --parallel start:server start:client",
-    "start:server": "(cd server && dotnet run --launch-profile https)",
+    "start:server": "(cd server && dotnet watch run --launch-profile https)",
     "start:client": "(cd client && ng serve)"
   },
   "repository": {

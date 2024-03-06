@@ -19,6 +19,13 @@ public class MusicalController: ControllerBase
         _context = context;
     }
 
+    [HttpGet("initialize")]
+    public async Task<IActionResult> InitializeDatabase()
+    {
+        await MusicalContext.Initialize(_context);
+        return Ok(new {message = "Database initialized"});
+    }
+
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Musical>>> GetMusicals()
     {
