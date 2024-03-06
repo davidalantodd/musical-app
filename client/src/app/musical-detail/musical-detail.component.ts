@@ -59,5 +59,8 @@ export class MusicalDetailComponent implements OnInit {
     this.router.navigate(['/musicals'])
   }
 
+  editMusical() {
+    this.router.navigate([`/musicals/${Number(this.musicalId)}/edit`])
+  }
   
 }

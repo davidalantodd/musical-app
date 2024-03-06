@@ -90,7 +90,7 @@ public class MusicalController: ControllerBase
                 throw;
             }
         }
-        return NoContent();
+        return CreatedAtAction("GetMusical", new {id = foundMusical.id}, foundMusical);
     }
 
     [HttpDelete("{id}")]

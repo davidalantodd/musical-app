@@ -4,16 +4,6 @@ import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router, RouterConfigOptions } from '@angular/router'
 
-interface Musical {
-  id: any|string;
-  name: string,
-  openDate: Date,
-  closeDate: Date,
-  location: string,
-  spotifyAlbum : string,
-  albumCover: string
-}
-
 @Component({
   selector: 'app-create-musical-form',
   standalone: true,
@@ -22,7 +12,7 @@ interface Musical {
   styleUrl: './create-musical-form.component.scss',
 })
 export class CreateMusicalFormComponent {
-  musicalForm = new FormGroup({
+  createMusicalForm = new FormGroup({
     name: new FormControl(''),
     openDate: new FormControl(''),
     closeDate: new FormControl(''),
@@ -31,12 +21,8 @@ export class CreateMusicalFormComponent {
     albumCover: new FormControl('')
   });
 
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
-  //get the trusted URL for the iframe
-  getSafeUrl(url: string) {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-  }
 
   createMusical(musical: any) {
     this.http.post('http://localhost:5132/api/Musical/', musical).subscribe({
@@ -46,8 +32,7 @@ export class CreateMusicalFormComponent {
   }
 
   onSubmit() {
-    const formData = this.musicalForm.value;
-    console.log(formData);
+    const formData = this.createMusicalForm.value;
     formData.openDate = formData.openDate ? new Date(formData.openDate).toISOString() : '';
     formData.closeDate = formData.closeDate ? new Date(formData.closeDate).toISOString() : '';
     this.createMusical(formData);

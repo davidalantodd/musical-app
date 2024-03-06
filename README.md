@@ -1,13 +1,12 @@
 # Musical App
 A full-stack app to track musical theatre productions using:
 - C#/.NET
-- Angular/TypeScript
+- Angular/TypeScript/SCSS
 - PostgreSQL
-- SCSS
 
 ## Installation
 
-Install the following for back-end:
+Install the following:
 - Visual Studio Code
 - [C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) for VS Code
 - [.NET SDK](https://dotnet.microsoft.com/download/dotnet/7.0) - latest version
