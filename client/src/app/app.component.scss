@@ -1,8 +1,15 @@
 mat-toolbar {
     display: flex;
     justify-content: space-around;
+    background: white;
 }
 
-.example-spacer {
+.spacer {
     flex: 1 1 auto;
-  }
+}
+
+mat-menu {
+    button {
+        font-family: 'Raleway';
+    }
+}

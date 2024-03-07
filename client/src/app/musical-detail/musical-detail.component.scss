@@ -5,11 +5,22 @@
 }
 
 .musical-detail-card {
-    width: 600px;
+    width: 100%;
     margin: 20px;
     align-items: center;
 }
 
+.musical-card-nav-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.musical-card-nav-bottom {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
 
 img {
     width: 250px;
@@ -17,5 +28,11 @@ img {
 }
 
 .details {
+    margin: 20px;
+}
+
+mat-card-title {
+    font-family: 'Raleway';
+    font-size: 3rem;
     margin: 20px;
 }
