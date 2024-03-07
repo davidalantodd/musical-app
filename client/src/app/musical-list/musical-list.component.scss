@@ -14,28 +14,23 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    min-height: 60vh;
 }
 
 .musical-list-card {
-    width: 300px;
-    margin: 20px;
-    padding: 20px;
+    position: relative;
+    margin: 10px;
     display: flex;
     flex: wrap;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    border-radius: 12px;
+    border-radius: 12px; 
     transition: box-shadow 180ms cubic-bezier(0.4,0.0,0.2,1);
+    height: 250px;
 }
 
 .musical-list-card:hover {
     box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
-}
-
-.details-button {
-    margin: 10px;
-
 }
 
 img {
@@ -43,13 +38,35 @@ img {
     border-radius: 12px;
 }
 
-mat-card-title {
-    font-family: 'Raleway';
-    font-size: 2rem;
-    margin: 20px;
+.musical-list-card:hover img {
+    opacity: .08;
 }
 
 mat-card-header {
-    width: 100%;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    opacity: 0;
+    padding: 10px;
+}
+
+.musical-list-card:hover mat-card-header {
+    opacity: 1;
+}
+
+.details-button {
+    width: 50px;
+    font-family: 'Raleway';
+}
+
+mat-card-title {
+    font-family: 'Raleway';
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
 }

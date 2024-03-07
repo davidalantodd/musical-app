@@ -13,3 +13,32 @@ mat-menu {
         font-family: 'Raleway';
     }
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sticky-footer {
+    background-color: #E8EAF6;
+    padding: 10px; 
+    font-family: 'Raleway';
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 225px;
+}
+
+#github-link {
+    display: flex;
+    justify-content: center;
+}
+
+#github-icon {
+    height: 1.5rem;
+}

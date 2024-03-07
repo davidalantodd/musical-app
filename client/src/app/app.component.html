@@ -1,9 +1,8 @@
 <header>
-    <mat-toolbar>
+    <mat-toolbar class="header">
         <button mat-icon-button color="primary" aria-label="Home icon" [routerLink]="['/', 'musicals']">
             <mat-icon>home</mat-icon>
         </button>
-        <span class="spacer"></span>
         <button mat-icon-button [matMenuTriggerFor]="menu" color="primary" aria-label="Menu icon" #trigger="matMenuTrigger">
             <mat-icon>menu</mat-icon>
         </button>
@@ -14,3 +13,11 @@
     </mat-toolbar>
 </header>
 <router-outlet></router-outlet>
+<mat-toolbar class="sticky-footer">
+    <div class="footer-content">
+        <a id="github-link" href="https://github.com/davidalantodd" target="_blank">
+            <img id="github-icon" src="../assets/github-mark.png" alt="My Icon"  aria-label="Github Icon">
+        </a>
+        <span>&copy;2024 David Todd</span>
+    </div>
+</mat-toolbar>

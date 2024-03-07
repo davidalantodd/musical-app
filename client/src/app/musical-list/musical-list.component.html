@@ -4,9 +4,9 @@
     <mat-card class="musical-list-card" *ngFor="let musical of musicals">
         <mat-card-header>
           <mat-card-title>{{musical.name}}</mat-card-title>
+          <button mat-stroked-button class="details-button" color="primary" [routerLink]="['/', 'musicals', musical.id]">Details</button>
         </mat-card-header>
         <img mat-card-image src={{musical.albumCover}} alt="album cover art for musical"/>
-        <button mat-stroked-button class="details-button" color="primary" [routerLink]="['/', 'musicals', musical.id]">Details</button>
     </mat-card>
   </div>
 </main>

@@ -2,12 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    min-height: 80vh;
 }
 
 .musical-detail-card {
-    width: 100%;
+    width: 80%;
     margin: 20px;
-    align-items: center;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
 }
 
 .musical-card-nav-top {
@@ -16,10 +17,13 @@
     width: 100%;
 }
 
-.musical-card-nav-bottom {
+.musical-detail-card-body {
     display: flex;
-    justify-content: end;
-    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
 }
 
 img {
@@ -31,8 +35,12 @@ img {
     margin: 20px;
 }
 
+mat-card-header {
+    display: flex;
+    justify-content: center;
+}
+
 mat-card-title {
     font-family: 'Raleway';
     font-size: 3rem;
-    margin: 20px;
 }
