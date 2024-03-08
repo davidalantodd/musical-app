@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    min-height: 80vh;
+    min-height: calc(100vh - 128px);
 }
 
 .musical-detail-card {
@@ -29,6 +29,13 @@
 img {
     width: 250px;
     border-radius: 12px;
+    margin: 20px;
+}
+
+@media screen and (max-width: 827px) {
+    img {
+        margin-bottom: 0px;
+    }
 }
 
 .details {

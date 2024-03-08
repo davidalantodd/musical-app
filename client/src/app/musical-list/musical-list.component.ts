@@ -8,7 +8,7 @@ interface Musical {
   id: any|string;
   name: string,
   openDate: Date,
-  closeDate: Date,
+  closeDate: Date | null,
   location: string,
   spotifyAlbum : string,
   albumCover: string

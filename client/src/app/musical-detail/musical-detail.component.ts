@@ -8,7 +8,7 @@ import { MusicalsRefreshService } from '../musicals-refresh.service';
 interface Musical {
   name: string,
   openDate: Date,
-  closeDate: Date,
+  closeDate: Date | null,
   location: string,
   spotifyAlbum : string,
   albumCover: string
@@ -24,7 +24,7 @@ export class MusicalDetailComponent implements OnInit {
     musical: Musical = {
       name: '',
       openDate: new Date(),
-      closeDate: new Date(),
+      closeDate: null,
       location: '',
       spotifyAlbum : '',
       albumCover: ''
@@ -44,6 +44,8 @@ export class MusicalDetailComponent implements OnInit {
       {
         console.log(data);
         this.musical = data;
+        this.musical.openDate = new Date(this.musical.openDate);
+        this.musical.closeDate = this.musical.closeDate ? new Date(this.musical.closeDate) : null;
       });
       
   }
