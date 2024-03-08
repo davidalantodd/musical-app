@@ -1,11 +1,43 @@
 [
     {
+        "Name": "Parade",
+        "OpenDate": "2023-03-16T00:00:00Z",
+        "CloseDate": "2023-08-06T00:00:00Z",
+        "Location": "Bernard B. Jacobs Theatre",
+        "SpotifyAlbum": "1Q4VxidzNyBpzIZ11qnCP3", 
+        "AlbumCover": "https://www.broadway.org/logos/shows/parade-500.jpg" 
+    },
+    {
         "Name": "& Juliet",
         "OpenDate": "2022-11-17T00:00:00Z",
         "CloseDate": null,
         "Location": "Stephen Sondheim Theatre",
         "SpotifyAlbum" : "2lZR9j0d9P7u7bvJZwJOKD",
         "AlbumCover": "https://www.broadway.org/logos/shows/andjuliet.jpg"
+    },
+    {
+        "Name": "Kimberly Akimbo",
+        "OpenDate": "2022-11-10T00:00:00Z",
+        "CloseDate": null,
+        "Location": "Booth Theatre",
+        "SpotifyAlbum": "1X4panrbiKDmwkRQ2hfos8",
+        "AlbumCover": "https://www.broadway.org/logos/shows/kimberly-akimbo_2022-10.png"
+    },
+    { 
+        "Name": "1776", 
+        "OpenDate": "2022-10-06T00:00:00Z",
+        "CloseDate": "2023-01-08T00:00:00Z",
+        "Location": "American Airlines Theatre",
+        "SpotifyAlbum": "3tb2Hp54TYu3ljbLr7cY8D",
+        "AlbumCover": "https://www.broadway.org/logos/shows/1776-revival.jpeg"
+    },
+    { 
+        "Name": "Into the Woods", 
+        "OpenDate": "2022-08-06T00:00:00Z",
+        "CloseDate": "2023-01-08T00:00:00Z", 
+        "Location": "St. James Theatre",
+        "SpotifyAlbum": "5z6BFXI711HbSAXDjgOAHE",
+        "AlbumCover": "https://www.broadway.org/logos/shows/intothewoods.jpeg"
     },
     {
         "Name": "A Strange Loop",
@@ -23,95 +55,63 @@
         "SpotifyAlbum" : "0VEsR6Rw4ApD0jeIlx4gsq",
         "AlbumCover": "https://www.broadway.org/logos/shows/six-2021-aug.jpg"
     },
-    {
-        "Name": "Hadestown",
-        "OpenDate": "2019-03-22T00:00:00Z",
-        "CloseDate": null,
-        "Location": "Walter Kerr Theatre",
-        "SpotifyAlbum": "1J1yxODbNlqKbwRqJxYJUP", 
-        "AlbumCover": "https://www.broadway.org/logos/shows/hadestown_poster-july-2021.jpg" 
-      },
-      {
-        "Name": "Hamilton",
-        "OpenDate": "2015-08-06T00:00:00Z",
-        "CloseDate": null,
-        "Location": "Richard Rodgers Theatre",
-        "SpotifyAlbum": "1kCHru7uhxBUdzkm4gzRQc",
-        "AlbumCover": "https://www.broadway.org/logos/shows/hamilton_2023-06v2.jpg" 
-      },
-      {
-        "Name": "Kimberly Akimbo",
-        "OpenDate": "2022-12-12T00:00:00Z",
-        "CloseDate": null,
-        "Location": "Booth Theatre",
-        "SpotifyAlbum": "1X4panrbiKDmwkRQ2hfos8",
-        "AlbumCover": "https://www.broadway.org/logos/shows/kimberly-akimbo_2022-10.png"
-      },
-      { 
-        "Name": "The Lion King", 
-        "OpenDate": "1997-11-13T00:00:00Z",
-        "CloseDate": null,
-        "Location": "Minskoff Theatre",
-        "SpotifyAlbum": "1y6p6tINBthUWsQVQJmiYK",
-        "AlbumCover": "https://www.broadway.org/logos/shows/lionking-2024.jpg"
-      },
-      { 
-        "Name": "Wicked", 
-        "OpenDate": "2003-10-30T00:00:00Z",
-        "CloseDate": null,
-        "Location": "Gershwin Theatre",
-        "SpotifyAlbum": "1woCvthHJakakroP6dXNxs",
-        "AlbumCover": "https://www.broadway.org/logos/shows/wicked_poster-july-2021.jpg"
-      },
-      { 
-        "Name": "1776", 
-        "OpenDate": "2022-10-06T00:00:00Z",
-        "CloseDate": "2023-01-08T00:00:00Z",
-        "Location": "American Airlines Theatre",
-        "SpotifyAlbum": "3tb2Hp54TYu3ljbLr7cY8D",
-        "AlbumCover": "https://www.broadway.org/logos/shows/1776-revival.jpeg"
-      },
-      { 
-        "Name": "Into the Woods", 
-        "OpenDate": "2022-07-10T00:00:00Z",
-        "CloseDate": null, 
-        "Location": "St. James Theatre",
-        "SpotifyAlbum": "5z6BFXI711HbSAXDjgOAHE",
-        "AlbumCover": "https://www.broadway.org/logos/shows/intothewoods.jpeg"
-      },
-      { 
+    { 
         "Name": "Jagged Little Pill", 
         "OpenDate": "2019-12-05T00:00:00Z",
         "CloseDate": "2021-12-17T00:00:00Z",
         "Location": "Broadhurst Theatre",
         "SpotifyAlbum": "3JUvh3Ch6QFxguLABtTOE3",
         "AlbumCover": "https://www.broadway.org/logos/shows/jagged_poster-july-2021.jpg"
-      },
-      {
-        "Name": "Legally Blonde",
-        "OpenDate": "2007-04-29T00:00:00Z",
-        "CloseDate": "2008-10-19T00:00:00Z",
-        "Location": "Palace Theatre",
-        "SpotifyAlbum": "7os43c6BUhMJkDUaEtDufk", 
-        "AlbumCover": "https://i.scdn.co/image/ab67616d0000b2731828473d593f22288c795e5c" 
-      },
-      {
-        "Name": "Company",
-        "OpenDate": "1970-04-26T00:00:00Z",
-        "CloseDate": "1972-01-01T00:00:00Z",
-        "Location": "Alvin Theatre",
-        "SpotifyAlbum": "6UbNkEqfwOVchQcmAYxJvZ",
-        "AlbumCover": "https://www.broadway.org/logos/shows/company_poster-july-2021.jpg" 
-      },
-      {
+    },
+    {
+        "Name": "Hadestown",
+        "OpenDate": "2019-04-17T00:00:00Z",
+        "CloseDate": null,
+        "Location": "Walter Kerr Theatre",
+        "SpotifyAlbum": "1J1yxODbNlqKbwRqJxYJUP", 
+        "AlbumCover": "https://www.broadway.org/logos/shows/hadestown_poster-july-2021.jpg" 
+    },
+    {
         "Name": "The Prom",
         "OpenDate": "2018-11-15T00:00:00Z",
         "CloseDate": "2019-08-11T00:00:00Z",
         "Location": "Longacre Theatre",
         "SpotifyAlbum": "2EeSecVK1JVbirWHqgWoq6", 
         "AlbumCover": "https://s3.ibdb.com/broadway/logos/shows/prom-new.jpg" 
-      },
-      {
+    },
+    {
+        "Name": "Dear Evan Hansen",
+        "OpenDate": "2016-12-04T00:00:00Z",
+        "CloseDate": "2022-09-18T00:00:00Z",
+        "Location": "Music Box Theatre",
+        "SpotifyAlbum": "0LhDyJXelg31FKLW5GDcKi", 
+        "AlbumCover": "https://www.broadway.org/logos/shows/dear-evan-hansen_poster-july-2021.jpg" 
+    },
+    {
+        "Name": "Waitress",
+        "OpenDate": "2016-04-24T00:00:00Z",
+        "CloseDate": "2020-01-05T00:00:00Z",
+        "Location": "Brooks Atkinson Theatre",
+        "SpotifyAlbum": "1E1tdqqLmyi03P0TJhGuw8", 
+        "AlbumCover": "https://www.broadway.org/logos/shows/waitress.jpeg" 
+    },
+    {
+        "Name": "Legally Blonde",
+        "OpenDate": "2007-04-29T00:00:00Z",
+        "CloseDate": "2008-10-19T00:00:00Z",
+        "Location": "Palace Theatre",
+        "SpotifyAlbum": "7os43c6BUhMJkDUaEtDufk", 
+        "AlbumCover": "https://i.scdn.co/image/ab67616d0000b2731828473d593f22288c795e5c" 
+    },
+    {
+        "Name": "13",
+        "OpenDate": "2008-10-05T00:00:00Z",
+        "CloseDate": "2009-01-04T00:00:00Z",
+        "Location": "Bernard B. Jacobs Theatre",
+        "SpotifyAlbum": "0PYHx9i2CuaxoYzVpc1ZIY", 
+        "AlbumCover": "https://i.scdn.co/image/ab67616d0000b2736d1c7528dfbb1fc5566968cb" 
+    },
+    {
         "Name": "Spring Awakening",
         "OpenDate": "2006-12-10T00:00:00Z",
         "CloseDate": "2009-01-18T00:00:00Z",
@@ -128,12 +128,36 @@
         "AlbumCover": "https://i.scdn.co/image/ab67616d0000b273c703ecbca5ec81e35ce1d7cb" 
       },
       {
-        "Name": "Dear Evan Hansen",
-        "OpenDate": "2016-12-04T00:00:00Z",
+        "Name": "Company",
+        "OpenDate": "1970-04-26T00:00:00Z",
+        "CloseDate": "1972-01-01T00:00:00Z",
+        "Location": "Alvin Theatre",
+        "SpotifyAlbum": "6UbNkEqfwOVchQcmAYxJvZ",
+        "AlbumCover": "https://i.scdn.co/image/ab67616d0000b273d740b9b24ff9c111617136e9" 
+      },
+      {
+        "Name": "Hamilton",
+        "OpenDate": "2015-08-06T00:00:00Z",
         "CloseDate": null,
-        "Location": "Music Box Theatre",
-        "SpotifyAlbum": "0LhDyJXelg31FKLW5GDcKi", 
-        "AlbumCover": "https://www.broadway.org/logos/shows/dear-evan-hansen_poster-july-2021.jpg" 
+        "Location": "Richard Rodgers Theatre",
+        "SpotifyAlbum": "1kCHru7uhxBUdzkm4gzRQc",
+        "AlbumCover": "https://www.broadway.org/logos/shows/hamilton_2023-06v2.jpg" 
+      },
+      { 
+        "Name": "Wicked", 
+        "OpenDate": "2003-10-30T00:00:00Z",
+        "CloseDate": null,
+        "Location": "Gershwin Theatre",
+        "SpotifyAlbum": "1woCvthHJakakroP6dXNxs",
+        "AlbumCover": "https://www.broadway.org/logos/shows/wicked_poster-july-2021.jpg"
+      },
+      { 
+        "Name": "The Lion King", 
+        "OpenDate": "1997-11-13T00:00:00Z",
+        "CloseDate": null,
+        "Location": "Minskoff Theatre",
+        "SpotifyAlbum": "1y6p6tINBthUWsQVQJmiYK",
+        "AlbumCover": "https://www.broadway.org/logos/shows/lionking-2024.jpg"
       },
       {
         "Name": "Rent",
@@ -142,29 +166,5 @@
         "Location": "Nederlander Theatre",
         "SpotifyAlbum": "1HsvK3RNYq8I61Orf6OQ8D", 
         "AlbumCover": "https://i.scdn.co/image/ab67616d00001e025160c7c9bb2f49448e1fe321" 
-      },
-      {
-        "Name": "Waitress",
-        "OpenDate": "2016-04-24T00:00:00Z",
-        "CloseDate": "2020-03-15T00:00:00Z",
-        "Location": "Brooks Atkinson Theatre",
-        "SpotifyAlbum": "1E1tdqqLmyi03P0TJhGuw8", 
-        "AlbumCover": "https://www.broadway.org/logos/shows/waitress.jpeg" 
-      },
-      {
-        "Name": "13",
-        "OpenDate": "2008-10-05T00:00:00Z",
-        "CloseDate": "2009-01-04T00:00:00Z",
-        "Location": "Bernard B. Jacobs Theatre",
-        "SpotifyAlbum": "0PYHx9i2CuaxoYzVpc1ZIY", 
-        "AlbumCover": "https://i.scdn.co/image/ab67616d0000b2736d1c7528dfbb1fc5566968cb" 
-      },
-      {
-        "Name": "Parade",
-        "OpenDate": "2023-02-21T00:00:00Z",
-        "CloseDate": null,
-        "Location": "Bernard B. Jacobs Theatre",
-        "SpotifyAlbum": "1Q4VxidzNyBpzIZ11qnCP3", 
-        "AlbumCover": "https://www.broadway.org/logos/shows/parade-500.jpg" 
       }
 ]
