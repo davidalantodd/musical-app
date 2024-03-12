@@ -42,7 +42,6 @@ export class MusicalDetailComponent implements OnInit {
     this.musicalId = id ? +id : 0;
     this.getMusical().subscribe(data => 
       {
-        console.log(data);
         this.musical = data;
         this.musical.openDate = new Date(this.musical.openDate);
         this.musical.closeDate = this.musical.closeDate ? new Date(this.musical.closeDate) : null;
