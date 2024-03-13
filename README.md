@@ -53,3 +53,19 @@ View front-end dev server using:
 Test the back-end endpoints by:
 - visting the https URL generated in the terminal with `/swagger` appended (e.g. https://localhost:7234/swagger)
 - using Postman (https://localhost:7234)
+
+## Features
+
+#### View all musicals in the database
+![Image](/client/src/assets/musical-app-view-all.png)
+
+#### View musical details, edit musical details, and delete a musical
+![Image](/client/src/assets/musical-app-view-details-delete.png)
+
+#### Edit musical details
+![Image](/client/src/assets/musical-app-edit-details.png)
+
+#### Create a new musical
+![Image](/client/src/assets/musical-app-create-new.png)
+
+
