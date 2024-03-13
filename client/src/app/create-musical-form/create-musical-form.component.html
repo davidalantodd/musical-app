@@ -1,29 +1,43 @@
-<div class="form-container">
-    <form [formGroup]="createMusicalForm" (ngSubmit)="onSubmit()">
-        <label>
-            Name:
-            <input type="text" formControlName="name">
-        </label> 
-        <label>
-            Open Date:
-            <input type="date" formControlName="openDate">
-        </label>
-        <label>
-            Close Date:
-            <input type="date" formControlName="closeDate">
-        </label>
-        <label>
-            Location:
-            <input type="text" formControlName="location">
-        </label>
-        <label>
-            Spotify Album:
-            <input type="text" formControlName="spotifyAlbum">
-        </label>
-        <label>
-            Album Cover:
-            <input type="text" formControlName="albumCover">
-        </label>  
-        <button type="submit">Submit</button>
-    </form>
+<div class="full-create-window">
+    <h1 id="create-form-header">create a new musical</h1>
+    <mat-card class="form-container">
+        <nav class="musical-card-nav-top">
+            <button mat-icon-button color="primary" aria-label="Back arrow icon" [routerLink]="['/', 'musicals']">
+            <mat-icon>arrow_back</mat-icon>
+            </button>
+        </nav>
+        <form [formGroup]="createMusicalForm" (ngSubmit)="onSubmit()">
+            <mat-form-field>
+                <mat-label>Name:</mat-label> 
+                <input matInput type="text" formControlName="name">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Open Date:</mat-label>
+                <input matInput [matDatepicker]="openpicker" formControlName="openDate">
+                <mat-datepicker-toggle matIconSuffix [for]="openpicker"></mat-datepicker-toggle>
+                <mat-datepicker #openpicker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Close Date:</mat-label>
+                <input matInput [matDatepicker]="closepicker" formControlName="closeDate">
+                <mat-datepicker-toggle matIconSuffix [for]="closepicker"></mat-datepicker-toggle>
+                <mat-datepicker #closepicker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Location:</mat-label>
+                <input matInput type="text" formControlName="location">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Spotify Album:</mat-label>
+                <input matInput type="text" formControlName="spotifyAlbum">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Album Cover:</mat-label>  
+                <input matInput type="text" formControlName="albumCover">
+            </mat-form-field>
+            <mat-card-actions>
+                <button mat-stroked-button color="primary" type="submit">Submit</button>
+            </mat-card-actions>
+        </form>
+    </mat-card>
 </div>

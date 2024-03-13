@@ -7,8 +7,8 @@
             <mat-icon>menu</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-            <button mat-menu-item [routerLink]="['/', 'musicals', 'new']" aria-label="Add Musical button">Add Musical</button>
-            <button mat-menu-item (click)="reseedMusicals()" aria-label="Regenerate seed data">Reset Original Musical List</button>
+            <button mat-menu-item [routerLink]="['/', 'musicals', 'new']" aria-label="Add Musical button">create a new musical</button>
+            <button mat-menu-item (click)="reseedMusicals()" aria-label="Regenerate seed data">reset musical database</button>
         </mat-menu>
     </mat-toolbar>
 </header>

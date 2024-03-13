@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MusicalsRefreshService } from '../musicals-refresh.service';
 import { firstValueFrom } from 'rxjs';
 import { DatePipe } from '@angular/common';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule} from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { RouterModule } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 
 interface Musical {
   id: number;
@@ -19,7 +26,16 @@ interface Musical {
 @Component({
   selector: 'app-edit-musical-form',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [
+    ReactiveFormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    RouterModule
+  ],
   templateUrl: './edit-musical-form.component.html',
   styleUrl: './edit-musical-form.component.scss'
 })
@@ -88,6 +104,10 @@ export class EditMusicalFormComponent {
     formData.openDate = formData.openDate ? new Date(formData.openDate) : null;
     formData.closeDate = formData.closeDate ? new Date(formData.closeDate) : null;
     await this.editMusical(formData);
+    await this.router.navigate([`/musicals/${this.musical.id}`])
+  }
+
+  async clickBack() {
     await this.router.navigate([`/musicals/${this.musical.id}`])
   }
   
