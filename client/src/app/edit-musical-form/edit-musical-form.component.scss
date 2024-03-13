@@ -27,6 +27,10 @@ form {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+
+    mat-form-field {
+        width: 40%;
+    }
 }
 
 button {

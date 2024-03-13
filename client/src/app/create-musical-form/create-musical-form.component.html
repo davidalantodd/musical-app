@@ -8,31 +8,31 @@
         </nav>
         <form [formGroup]="createMusicalForm" (ngSubmit)="onSubmit()">
             <mat-form-field>
-                <mat-label>Name:</mat-label> 
+                <mat-label>Name</mat-label> 
                 <input matInput type="text" formControlName="name">
             </mat-form-field>
             <mat-form-field>
-                <mat-label>Open Date:</mat-label>
+                <mat-label>Open Date</mat-label>
                 <input matInput [matDatepicker]="openpicker" formControlName="openDate">
                 <mat-datepicker-toggle matIconSuffix [for]="openpicker"></mat-datepicker-toggle>
                 <mat-datepicker #openpicker></mat-datepicker>
             </mat-form-field>
             <mat-form-field>
-                <mat-label>Close Date:</mat-label>
+                <mat-label>Close Date</mat-label>
                 <input matInput [matDatepicker]="closepicker" formControlName="closeDate">
                 <mat-datepicker-toggle matIconSuffix [for]="closepicker"></mat-datepicker-toggle>
                 <mat-datepicker #closepicker></mat-datepicker>
             </mat-form-field>
             <mat-form-field>
-                <mat-label>Location:</mat-label>
+                <mat-label>Location</mat-label>
                 <input matInput type="text" formControlName="location">
             </mat-form-field>
             <mat-form-field>
-                <mat-label>Spotify Album:</mat-label>
+                <mat-label>Spotify Album ID</mat-label>
                 <input matInput type="text" formControlName="spotifyAlbum">
             </mat-form-field>
             <mat-form-field>
-                <mat-label>Album Cover:</mat-label>  
+                <mat-label>Album Cover URL</mat-label>  
                 <input matInput type="text" formControlName="albumCover">
             </mat-form-field>
             <mat-card-actions>
